@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>AI World</title>
+    <meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+	<!-- stylesheet css -->
+	<link rel="stylesheet" href="../static/bootstrap.min.css">
+	<link rel="stylesheet" href="../static/font-awesome.min.css">
+	<link rel="stylesheet" href="../static/nivo-lightbox.css">
+	<link rel="stylesheet" href="../static/nivo_themes/default/default.css">
+	<link rel="stylesheet" href="../static/templatemo-style.css">
+    <!-- google web font css -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300, 400, 500" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="navbar navbar-default navbar-static-top" role="navigation">
+		<div class="navbar-header">
+			<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="icon icon-bar"></span>
+				<span class="icon icon-bar"></span>
+				<span class="icon icon-bar"></span>
+			</button>
+		
+		</div>
+		<div class="collapse navbar-collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="{{ url_for('home') }}">HOME</a></li>
+				<li><a href="{{ url_for('search') }}">Quick Read</a></li>
+				<li><a href="{{ url_for('getSummary') }}">Summarize</a></li>
+			</ul>
+		</div>
+	</div>
+</div>		
+{% block content %}{% endblock %}
+</body>
+</html>

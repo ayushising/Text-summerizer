@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+
+<section class="user">
+  <div class="user_options-container">
+    <div class="user_options-text">
+      <div class="user_options-unregistered">
+        <h2 class="user_unregistered-title">Want to try using URL?</h2>
+        <p class="user_unregistered-text">We also support Web URl. We can just get the url text and summerize it for you.</p>
+        <button class="user_unregistered-signup" id="signup-button">Use Web Url</button>
+      </div>
+
+      <div class="user_options-registered">
+        <h2 class="user_registered-title"> Do you have the text?</h2>
+        <p class="user_registered-text">If you have text then you can just paste it and we will summerize it for you.</p>
+        <button class="user_registered-login" id="login-button">Use Text</button>
+      </div>
+    </div>
+    
+    <div class="user_options-forms" id="user_options-forms">
+      <div class="user_forms-login">
+        <h2 class="forms_title">Enter Text</h2>
+        <form class="forms_form" action="/summarize" method="post">
+         
+          <fieldset class="forms_fieldset">
+            
+              <div class="forms_field">
+                <textarea  name="test" maxlength="20000" placeholder="Paste your text article and click Summarize.. " style="font-family: Montserrat; margin: 10px; height: 140px; width: 100%;"></textarea>
+          </fieldset>
+          <div class="forms_buttons">
+           
+            <input type="submit" value="summerize" class="forms_buttons-action">
+          </div>
+        </form>
+      </div>
+      <div class="user_forms-signup">
+        <h2 class="forms_title">Use Web Url</h2>
+        <form class="forms_form" action="/summarize" method="post">
+          <fieldset class="forms_fieldset">
+            <div class="forms_field">
+              <input type="text" placeholder="Full URL"  name="web" class="forms_field-input" required />
+            </div>
+            
+          </fieldset>
+          <div class="forms_buttons">
+            <input type="submit" value="Use Web Url" class="forms_buttons-action">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<script  src="../static/script.js"></script>
+{% endblock %}
+  
+
